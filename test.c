@@ -21,11 +21,14 @@ int main(void){
     }*/
 
     int x=45;
-    int a=0;
+    int a=1;
     while(a!=x){
         int i=2;
-        if(isPrime(i) && x%i==0){
-            printf("%d\n",i);
+        while(x%i==0){        
+            if(isPrime(i)){
+                printf("%d\n",i);
+                a=a*i;
+            }
         }
     }
 
